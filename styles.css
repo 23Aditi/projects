@@ -1,0 +1,51 @@
+
+.quote-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.quote-container:hover {
+    transform: translateY(-2px);
+}
+
+.quote-content {
+    font-size: 18px;
+    color: #333;
+    background-color: orange;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.quote-author {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+.quote-container::before,
+.quote-container::after {
+    content: '"';
+    position: absolute;
+    font-size: 60px;
+    color: #e0e0e0;
+    font-family: Georgia, serif;
+    height: 30px;
+    line-height: 1;
+}
+
+.quote-container::before {
+    top: 0;
+    left: 0;
+    transform: translate(-20px, -10px);
+}
+
+.quote-container::after {
+    bottom: 0;
+    right: 0;
+    transform: translate(20px, 10px) rotate(180deg);
+}
